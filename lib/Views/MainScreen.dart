@@ -42,8 +42,8 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
     return Scaffold(
       body: _body,
       bottomNavigationBar: MotionTabBar(
-        labels: [
-          "Discover","Interact","Events", "Settings"
+        labels: const [
+          "Discover","Interact","Events", "More"
         ],
         initialSelectedTab: "Discover",
         tabIconColor: Colors.black,
@@ -65,7 +65,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
           });
         },
         icons: [
-          Icons.lightbulb,Icons.group,Icons.event, Icons.settings
+          Icons.lightbulb,Icons.group,Icons.event, Icons.more_horiz_outlined
         ],
         textStyle: TextStyle(color: HexColor(AppColors.mainColor)),
       ),
