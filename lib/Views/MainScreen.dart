@@ -59,7 +59,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
               _body = OneEvents().getWidget();
             }
             else if (value == 3){
-              _body = AppSettings().getWidget();
+              _body = AppSettings().getWidget(context);
             }
             _tabController.index = value;
           });

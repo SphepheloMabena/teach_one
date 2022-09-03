@@ -2,10 +2,13 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:teach_one/Models/AppColors.dart';
+import 'package:teach_one/Views/CreateEvent.dart';
+
+import 'CreateBlog.dart';
 
 class AppSettings{
 
-  Column getWidget(){
+  Column getWidget(BuildContext context){
     return Column(
         children: [
           Container(
@@ -44,7 +47,11 @@ class AppSettings{
           Padding(
             padding: const EdgeInsets.only(top:110),
             child:  TextButton(
-              onPressed: (){},
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context){
+                  return CreateBlog();
+                }));
+              },
               child: SizedBox(
                 width: double.maxFinite,
                 height: 80,
@@ -68,7 +75,7 @@ class AppSettings{
                           child: Column(
                             children: [
                               Center(
-                                child: Text("Create Blog",
+                                child: Text("Share Knowledge",
                                   style: TextStyle(
                                       color: Colors.black,
                                       fontSize: 21,
@@ -78,7 +85,7 @@ class AppSettings{
                               Center(
                                 child: Padding(
                                   padding: const EdgeInsets.only(top:5),
-                                  child: Text("Share knowledge with other",
+                                  child: Text("Facts, Career advice",
                                     style: TextStyle(
                                         color: HexColor(AppColors.mainColor),
                                         fontSize: 15
@@ -158,7 +165,11 @@ class AppSettings{
           Padding(
             padding: const EdgeInsets.only(top:0),
             child:  TextButton(
-              onPressed: (){},
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context){
+                  return CreateEvent();
+                }));
+              },
               child: SizedBox(
                 width: double.maxFinite,
                 height: 70,
